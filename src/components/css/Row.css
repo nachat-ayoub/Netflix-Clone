@@ -1,0 +1,55 @@
+/* start Row */
+.row {
+  margin: 20px;
+}
+
+.row_posters {
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  min-height: 200px;
+  height: fit-content;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+.row_posters::-webkit-scrollbar {
+  display: none; /* Chrome */
+}
+
+.row_title {
+  text-align: start;
+  margin-bottom: 10px;
+}
+.row_poster {
+  cursor: pointer;
+  object-fit: contain;
+  height: 150px;
+  margin: 5px;
+  transition: 450ms;
+  position: relative;
+  z-index: 2;
+}
+.row_poster::before {
+  content: "";
+  object-fit: contain;
+  position: absolute;
+  z-index: 3;
+  /* top: 0; */
+  width: 100%;
+  height: 110px;
+  background-color: rgb(43, 43, 43);
+}
+.row_poster:hover {
+  transform: scale(1.08);
+}
+.row_LargePoster:hover {
+  transform: scale(1.09);
+}
+.row_LargePoster {
+  object-fit: contain;
+  height: 100%;
+  width: 250px;
+  max-width: 50wh;
+}
+/* end Row */
